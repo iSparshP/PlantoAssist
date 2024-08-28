@@ -179,12 +179,6 @@ def run_code():
         log.error(f'Error running code: {e}')
         return jsonify({'error': 'Internal Server Error', 'message': str(e)}), 500
 
-@app.route("/test", methods=['GET'])
-def test_route():
-    """
-    Test route to check if the server is running.
-    """
-    return jsonify({'output': 'the route is working'})
 
 if __name__ == '__main__':
     # Run the Flask app
